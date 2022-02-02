@@ -1,0 +1,30 @@
+.NavbarItems{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.menu-icon {
+    display: none;
+}
+li{
+    list-style-type: none;
+}
+.navbar-logo {
+    display: flex;
+    justify-content:flex-start;
+    cursor: pointer;
+}
+.nav-menu{
+    display: flex;
+    margin-left: 1.5rem;
+}
+.nav-links{
+    text-decoration: none;
+    color: black;
+    margin-right: 1.5rem;
+}
+.nav-links-mobile {
+    display: none;
+}
