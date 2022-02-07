@@ -4,8 +4,8 @@
     justify-content: space-around;
     align-items: center;
     font-size: 1.5rem;
-    margin-top: 1rem;
-    color: black;
+    color: white;
+    background-color: black;
 }
 .menu-icon {
     display: none;
@@ -20,16 +20,14 @@
 }
 .nav-links{
     text-decoration: none;
-    color: black;
+    color: white;
     margin-right: 1.5rem;
-    color: black;
-    font-size: 2rem;
-    font-weight:400;
+    font-size: 1.5rem;
 }
 .nav-links-mobile {
     display: none;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 960px){
     .NavbarItems{
         position: relative;
     }
@@ -40,13 +38,14 @@
         height: 500px;
         position: absolute;
         top: 80px;
-        left: -100%;
+        left: -150%;
         opacity: 1;
         transition: all 0.5s ease;
+        background: black
     }
     .nav-menu.active{
         width: 100%;
-        left: 0;
+        left: -6.5%;
         opacity: 1;
         transition: all 0.5 ease;
         z-index: 1;
@@ -55,7 +54,7 @@
         text-align: center;
         padding: 2rem;
         width: 100%;
-        display: table;
+        display: block;
     }
     .navbar-logo{
         position: absolute;
@@ -66,10 +65,30 @@
     .menu-icon{
         display: block;
         position: absolute;
-        top: 0;
+        top: 10%;
         right: 0;
         transform: translate(-100%, 60%);
         font-size: 1.5rem;
         cursor: pointer;
+    }
+    .nav-links-mobile{
+        display: block;
+        text-align: center;
+        padding: 1rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 70%;
+        background: #4ad9e4;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    .nav-links-mobile:hover{
+        background: #fff;
+        color: #6568F4;
+        transition: 250ms;
+    }
+    Button {
+        display: none;
     }
 }

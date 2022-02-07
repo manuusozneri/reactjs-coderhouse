@@ -20,7 +20,7 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Iniciar Sesion',
+        title: 'Comprar',
         url: '#',
         cName: 'nav-links-mobile'
     },
