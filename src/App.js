@@ -7,7 +7,8 @@ function App() {
   return (
       <div className="App">
       <Navbar/>
-      <Hero/>
+      <Hero title="Este es un titulo de ejemplo"/>
+      <Hero subtitle="Este es un subtitulo de ejemplo"/>
       </div>
       
     
