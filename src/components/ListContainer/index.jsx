@@ -6,7 +6,6 @@ const Hero = (props) => {
     return (
         <div className="main-text">
             <h1>{props.title}</h1>
-            <h3>{props.subtitle}</h3>
         </div>
     );
 };
