@@ -1,37 +1,44 @@
 import React from 'react';
 import './ItemCount.css';
 
-class Counter extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            initialValue: 1,
+const Counter = (props) => {
+    var stock = props.stock 
+    
+    const [count, setCount] = React.useState(1);
+    const incValues = () => {
+        if(count >= stock ) {
+            <button>+</button>
+        } else{
+            setCount(count + 1);
+        }
+        
+    }
+    const decValues = () => {
+        if (count > 1){
+            setCount(count - 1)
+        } else {
+            <button>-</button>
         }
     }
-    increment = () => {
-        this.setState({
-            initialValue: this.state.initialValue + 1
-        })
-    }
-    decrement = () => {
-        this.setState({
-            initialValue: this.state.initialValue - 1
-        })
-    }
-    render() {
+
         return(
             <div className="cart">
                 <h2>Producto</h2>
-                <h3>{this.state.initialValue}</h3>
+                <img src={props.imagen} alt={props.alt}></img>
+                <h3>{count}</h3>
                 <div className="button-wrapper">
-                    <button onClick={this.decrement}>-</button>
-                    <button onClick={this.increment}>+</button>
+                    <button onClick={decValues}>-</button>
+                    <button>Add to Cart</button>
+                    <button onClick={incValues}>+</button>
                 </div>
+                <h4>Stock: {props.stock}</h4>
             </div>
         )
-    }
-    
 }
+    
+    
+    
+
         
 
         

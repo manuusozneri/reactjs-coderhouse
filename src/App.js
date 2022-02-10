@@ -9,7 +9,7 @@ function App() {
       <div className="App">
       <Navbar/>
       <Hero title="Este es un titulo de ejemplo"/>
-      <Counter initial={1}/>
+      <Counter stock="4" imagen="https://via.placeholder.com/150" alt="placeholder"/>
       </div>
       
     

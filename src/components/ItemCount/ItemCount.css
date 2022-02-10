@@ -1,7 +1,7 @@
 .cart{
     margin: auto;
     margin-top: 1.5rem;
-    width: 50%;
+    width: 25%;
     border: 3px solid #29ac45;
     padding: 10px;
     display: flex;
@@ -12,7 +12,7 @@
     margin-top: 1.3rem;
 }
 .button-wrapper button{
-    background-color:#4ef18f;
+    background-color:#3ca854;
     color: #fff;
     padding:0.3em 1.2em;
     margin:0 0.1em;
@@ -27,5 +27,12 @@
     border-color: rgba(255,255,255,1);
 }
 .cart h3{
+    margin-top: 1.5rem;
+}
+.cart h4{
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+.cart img{
     margin-top: 1.5rem;
 }
