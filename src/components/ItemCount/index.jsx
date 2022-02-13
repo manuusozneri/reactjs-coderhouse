@@ -4,6 +4,7 @@ import './ItemCount.css';
 const Counter = (props) => {
     var stock = props.stock 
     
+    
     const [count, setCount] = React.useState(1);
     const incValues = () => {
         if(count >= stock ) {
@@ -20,7 +21,9 @@ const Counter = (props) => {
             <button>-</button>
         }
     }
-
+    const onAdd = () => {
+        alert(count + " items added");
+    }
         return(
             <div className="cart">
                 <h2>Producto</h2>
@@ -28,7 +31,7 @@ const Counter = (props) => {
                 <h3>{count}</h3>
                 <div className="button-wrapper">
                     <button onClick={decValues}>-</button>
-                    <button>Add to Cart</button>
+                    <button onClick={onAdd}>Add to Cart</button>
                     <button onClick={incValues}>+</button>
                 </div>
                 <h4>Stock: {props.stock}</h4>
