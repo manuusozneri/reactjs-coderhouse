@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
-import Hero from './components/ListContainer';
+import Hero from './components/HeroSection';
 import Counter from './components/ItemCount';
 
 
