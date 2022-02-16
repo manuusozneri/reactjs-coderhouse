@@ -1,6 +1,6 @@
 import React from 'react';
 import './ItemCount.css';
-import Item from './Item.js';
+import MoreInfo from './MoreInfo.js';
 
 
 
@@ -40,11 +40,11 @@ const Counter = (props) => {
                     <button onClick={incValues}>+</button>
                 </div>
                 <div className="button-wrapper">
-                    <Item />
+                    <MoreInfo />
                 </div>
                 <h4>Stock: {props.stock}</h4>
             </div>
-        )
+    )
 }
 
     

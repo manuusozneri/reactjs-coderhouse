@@ -1,49 +1,12 @@
-import React, {useState} from 'react'
-import Modal from '../Modal/Modal'
 
-const Item = () => {
-    const [item] = useState([
-        {
-            id: 1,
-            title: 'X',
-            price: 40,
-            description: 'lorem ipsum', 
-            pictureUrl: 'http://example.com'
-        }
-    ]);
-    const [showModal, setShowModal] = useState(false);
-    function openModal () {
-        setShowModal(prev => !prev)
-        const promise = new Promise((resolve, reject) =>{
-            const products = item
-            resolve(products)
-        })
-        promise.then(result => {
-            setTimeout(() => {
-                console.log(result)
-                return result
-            }, 2000)
-        }, error =>{
-            console.log('Error:' , error)
-        })
+
+export const Item = [
+    {
+        id: 1,
+        title: 'Product X',
+        price: '$40',
+        description: 'La cámara privada de un juez.', 
+        pictureUrl: 'https://www.google.com/search?q=cameras+wallpaper&tbm=isch&ved=2ahUKEwirvquX-IT2AhUhNLkGHZWfCOMQ2-cCegQIABAA&oq=cameras+wall&gs_lcp=CgNpbWcQARgAMgUIABCABDIFCAAQgAQyBggAEAUQHjIGCAAQBRAeMgYIABAFEB4yBggAEAUQHjIGCAAQBRAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgcIIxDvAxAnOgQIABBDUPgEWJIWYMUfaARwAHgAgAFGiAHjA5IBATiYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=900NYuvmEqHo5OUPlb-imA4&bih=969&biw=1920#imgrc=aP0JRjhxzEaUjM'
     }
-    return (
-        <>
-        <div className="button-wraper" /><div className="btn-info">
-            {item.map(item => {
-                return (
-                    <div className="button-wraper">
-                        <button onClick={openModal} key={item.id}>+ Info</button>
-                    </div>
-                );
-            })}
-        </div>
-        <div className="modal">
-            <Modal showModal={showModal} setShowModal={setShowModal}/>
-        </div>
-        </>
-        
-    )
-} 
+]
 
-export default Item;

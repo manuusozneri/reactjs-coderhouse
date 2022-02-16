@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {MdClose} from 'react-icons/md'
+import {Item} from '../ItemCount/Item'
 
 const Background = styled.div`
     position: fixed;
@@ -18,19 +19,17 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-    width: 800px;
-    height: 500px;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-    background: #fff;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 999;
-    border-radius: 10px;
+  width: 800px;
+  height: 500px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
 `;
-
 
 const ModalContent = styled.div`
   display: flex;
@@ -47,14 +46,19 @@ const ModalContent = styled.div`
     background: #141414;
     color: #fff;
     border: none;
-    font-size: 18px;
   }
   button:hover{
     background-color:#3ca854;
     transition: 500ms;
   }
 `;
-
+const ModalImg = styled.img`
+    position: relative;
+    margin-left: 20px;
+    width: 100%;
+    height: 86%;
+    border-radius: 10px 10px 10px 10px;
+`;
 const CloseModalButton = styled(MdClose)`
   cursor: pointer;
   position: absolute;
@@ -65,26 +69,40 @@ const CloseModalButton = styled(MdClose)`
   padding: 0;
   z-index: 10;
 `;
-const Modal = ({ showModal, setShowModal }) => {
+
+export const Modal = ({ showModal, setShowModal}) => {
     return (
         <>
-        {showModal ? (
-            <Background>
+          {showModal ? (
+            <Background >
                 <ModalWrapper showModal={showModal}>
-                    
-                    <ModalContent>
-                        <h1>Product X</h1>
-                        <h3>Price: $40</h3>
-                        <h4>A camera obscura.</h4>
-                        <button>Buy Now</button>
-                    </ModalContent>
-                    <CloseModalButton aria-label="Close modal" onClick={() => setShowModal(prev => !prev)}/>
+                  <ModalImg src={require('./ModalPhoto.jpg')} alt='camera' />
+                    {Item.map(Item => {
+                        return(
+                            <>
+                            <ModalContent key={Item.id}>
+                                <h1>{Item.title}</h1>
+                                <h3>{Item.price}</h3>
+                                <h4>{Item.description}</h4>
+                                <button>Buy Now</button>
+                            </ModalContent></>
+                        ) 
+                    })}
+                  <CloseModalButton
+                    aria-label='Close modal'
+                    onClick={() => setShowModal(prev => !prev)}
+                  />
                 </ModalWrapper>
             </Background>
-        ): null}
+          ) : null}
         </>
-    )
-    
+      );
 }
+
+
+
+
+
+
 
 export default Modal;
