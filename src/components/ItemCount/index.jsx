@@ -1,6 +1,6 @@
 import React from 'react';
 import './ItemCount.css';
-import {ItemList} from './ItemList.js';
+import Item from './Item.js';
 
 
 
@@ -27,20 +27,7 @@ const Counter = (props) => {
         alert(count + " items added");
     }
     
-    function promise() {
-        const promise = new Promise((resolve, reject) =>{
-            const products = ItemList[0]
-            resolve(products)
-        })
-        promise.then(result => {
-            setTimeout(() => {
-                console.log(result)
-                return result
-            }, 2000)
-        }, error =>{
-            console.log('Error:' , error)
-        })
-    }
+    
     
     return(
             <div className="cart">
@@ -53,10 +40,7 @@ const Counter = (props) => {
                     <button onClick={incValues}>+</button>
                 </div>
                 <div className="button-wrapper">
-                    <button className="btn-info" onClick={promise}>
-                        + Info
-                    </button>
-                    
+                    <Item />
                 </div>
                 <h4>Stock: {props.stock}</h4>
             </div>

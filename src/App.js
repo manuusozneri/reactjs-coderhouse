@@ -11,7 +11,6 @@ function App() {
       <Navbar/>
       <Hero title="Este es un titulo de ejemplo"/>
       <Counter stock="4" imagen="https://via.placeholder.com/150" alt="placeholder"/>
-      
       </div>
       
     

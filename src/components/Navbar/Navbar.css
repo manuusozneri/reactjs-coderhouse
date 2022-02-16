@@ -25,7 +25,7 @@
     font-size: 1.5rem;
 }
 .nav-links:hover{
-    background-color: rgba(255, 255, 255, 0.39);
+    color: #ffffffff;
 }
 .nav-links-mobile {
     display: none;
