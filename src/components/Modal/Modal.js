@@ -85,7 +85,8 @@ export const Modal = ({ showModal, setShowModal}) => {
                                 <h3>{Item.price}</h3>
                                 <h4>{Item.description}</h4>
                                 <button>Buy Now</button>
-                            </ModalContent></>
+                            </ModalContent>
+                            </>
                         ) 
                     })}
                   <CloseModalButton
