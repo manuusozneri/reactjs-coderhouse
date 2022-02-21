@@ -6,6 +6,7 @@
     font-size: 1.5rem;
     color: white;
     background-color: #0d0d0d;
+    z-index: 99;
 }
 .menu-icon {
     display: none;
@@ -23,6 +24,9 @@
     color: white;
     margin-right: 1.5rem;
     font-size: 1.5rem;
+}
+.nav-links a{
+    text-decoration: none;
 }
 .nav-links:hover{
     color: #ffffffff;
@@ -95,7 +99,7 @@
         color: #2fa72b;
         transition: 250ms;
     }
-    Button {
+    .buttons {
         display: none;
     }
 }

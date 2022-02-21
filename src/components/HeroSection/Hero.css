@@ -1,7 +1,51 @@
-.main-text {
+.HeroContainer{
+    height: 100vh;
+    width: 100%;
+    background: #0c0c0c;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
-    font-size: 2rem;
+    padding: 0 30px;
+    position: relative;
+}
+.HeroBg{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+}
+.HeroContent{
+    max-width: 1200px;
+    position: absolute;
+    padding: 8px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HeroH1{
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+}
+.HeroP{
+    margin-top: 24px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    max-width: 600px;
+}
+.HeroBtnWrapper{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 480px){
+    .HeroH1{
+        font-size: 38px;
+    }
+    .HeroP{
+        font-size: 18px;
+    }
 }

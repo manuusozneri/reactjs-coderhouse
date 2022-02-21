@@ -4,3 +4,30 @@
   box-sizing: border-box;
   font-family: 'Questrial', sans-serif;
 }
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 2.5rem;
+}
+h1#productos{
+  margin-top: 5rem;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.productSection{
+  background-color: #0d0d0d;
+  height: 100vh;
+} 
+@media screen and (max-width: 480px){
+    .item-container {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
