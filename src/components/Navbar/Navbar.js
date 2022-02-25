@@ -23,7 +23,7 @@ class Navbar extends Component {
                             Home
                         </li>
                     </Link>
-                    <Link to="productos" spy={true} smooth={true} offset={-15} duration={500} onSetActive={this.handleSetActive}>
+                    <Link to="/product" spy={true} smooth={true} offset={-15} duration={500} onSetActive={this.handleSetActive}>
                         <li className="nav-links">
                             Productos
                         </li>

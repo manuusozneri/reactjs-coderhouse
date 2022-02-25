@@ -3,7 +3,7 @@ import './ItemCount.css';
 import MoreInfo from './MoreInfo.js';
 
 
-export const array = [
+const array = [
     {
         id: 1,
         title: 'Product X',
@@ -28,7 +28,9 @@ export const array = [
     
     
 ]
+
 const Counter = (props) => {
+    
     var stock = props.stock 
     
     const [count, setCount] = React.useState(1);
@@ -50,8 +52,6 @@ const Counter = (props) => {
     const onAdd = () => {
         alert(count + " items added");
     }
-    
-    
     
     return (
         
